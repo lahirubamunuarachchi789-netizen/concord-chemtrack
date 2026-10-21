@@ -1,0 +1,17 @@
+# ============================================================
+#  Concord ChemTrack - Streamlit theme configuration
+#  (safe to commit: contains NO credentials)
+# ============================================================
+[theme]
+primaryColor = "#0B1F3A"          # Navy Blue
+backgroundColor = "#F5F7FB"       # Off-white
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0B1F3A"
+font = "sans serif"
+
+[server]
+headless = true
+enableStaticServing = false
+
+[browser]
+gatherUsageStats = false

@@ -1,0 +1,63 @@
+# ============================================================
+#  Concord ChemTrack - .gitignore
+#  Credentials must NEVER be committed to GitHub.
+# ============================================================
+
+# --- Streamlit secrets (contains Supabase URL + service key) ---
+# Ignore every real secrets file, anywhere in the tree.
+**/secrets.toml
+.secrets.toml
+# ...but KEEP the shareable templates so others know what to fill in.
+!.streamlit/secrets.toml.example
+!.streamlit/config.toml
+!.env.example
+# Any local override of the example is still a secret.
+.streamlit/secrets.toml.*
+!.streamlit/secrets.toml.example
+
+# --- Environment files ---
+.env
+.env.*
+!.env.example
+*.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# --- Streamlit local state / caches ---
+.streamlit/local_state/
+.cache/
+*.log
+
+# --- Data / generated exports (may contain inventory data) ---
+exports/
+qa/
+*.xlsx
+!requirements.txt
+
+# --- Tooling ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
