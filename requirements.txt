@@ -1,7 +1,9 @@
+# ============================================================
+#  Runtime dependencies only (deployment installs these).
+#  Security: passwords are hashed with hashlib.pbkdf2_hmac from the
+#  standard library, so no extra crypto package is required.
+# ============================================================
 streamlit>=1.36.0
 supabase>=2.4.0
 pandas>=2.0.0
 openpyxl>=3.1.0
-
-# Optional: secures password hashing / key handling (falls back to hashlib if absent)
-cryptography>=42.0.0
